@@ -13,15 +13,21 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            <NavLink class="nav-link" href="Adults">
+                <span class="oi oi-briefcase" aria-hidden="true"></span> Adults
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="AddAdult">
+                <span class="oi oi-camera-slr" aria-hidden="true"></span> Add Adult
             </NavLink>
         </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="EditAdult">
+                <span class="oi oi-cloud" aria-hidden="true"></span> Edit Adults
+            </NavLink>
+        </li>
+
     </ul>
 </div>
 
@@ -30,8 +36,7 @@
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
+    private void ToggleNavMenu() {
         collapseNavMenu = !collapseNavMenu;
     }
 

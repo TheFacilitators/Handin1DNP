@@ -90,14 +90,13 @@ using Handin1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Shared\NavMenu.razor"
+#line 34 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
+    private void ToggleNavMenu() {
         collapseNavMenu = !collapseNavMenu;
     }
 
