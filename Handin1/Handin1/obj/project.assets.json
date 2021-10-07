@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
+    "C:\\Users\\Lukas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj",
+      "projectUniqueName": "C:\\Users\\Lukas\\Documents\\GitHub\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj",
       "projectName": "Handin1",
-      "projectPath": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj",
-      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\obj\\",
+      "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj",
+      "packagesPath": "C:\\Users\\Lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Handin1DNP\\Handin1\\Handin1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Lukas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
