@@ -1,4 +1,5 @@
 ﻿@page "/Adults"
+@using Models
 <h3>Adults</h3>
 
 <table class="table">
@@ -11,10 +12,17 @@
         </tr>
         </thead>
         <tbody>
-     
+        
+          @foreach (var item in adults) {
+                    <tr>
+                       
+                    </tr>
+                }
+
         </tbody>
     </table>
 
 @code {
-    
+    private List<Adult> adults;
+
 }
