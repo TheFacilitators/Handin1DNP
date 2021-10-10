@@ -1,6 +1,21 @@
 ﻿@page "/EditAdult"
+@using Models
+@using Handin1.Data
 <h3>Edit Adult</h3>
 
 @code {
-    
+    public int Id { get; set; }
+    private Adult editing;
+
+    protected override Task OnInitializedAsync()
+    {
+        editing = AdultsData.GetAdultById(Id);
+        return base.OnInitializedAsync();
+    }
+
+    private void SaveChanges()
+    {
+        
+    }
+
 }
