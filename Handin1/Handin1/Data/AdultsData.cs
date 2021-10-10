@@ -27,9 +27,9 @@ namespace Handin1.Data
             return adults.FirstOrDefault(a => a.Id == id);
         }
 
-        public void EditAdult(int id)
+        public void EditAdult(Adult adult)
         {
-            file.EditAdult(GetAdultById(id));
+            file.EditAdult(adult);
         }
 
         public void RemoveAdult(int id)

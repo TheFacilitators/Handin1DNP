@@ -1,7 +1,28 @@
 ﻿@page "/EditAdult"
 @using Models
 @using Handin1.Data
+
+@inject IAdultsData Data
+@inject NavigationManager Nav
+
 <h3>Edit Adult</h3>
+
+<EditForm Model="@editing" OnValidSubmit="@Save">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="from-group">First name:<br/>
+        <InputTextArea rows="4" @bind-Value="editing.FirstName"/>
+    </div>
+    <div class="from-group">Last name:<br/>
+        <InputTextArea rows="4" @bind-Value="editing.LastName"/>
+    </div>
+    <div class="form-group">Age:<br/>
+        <InputNumber @bind-Value="editing.Age"></InputNumber></div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+    </p>
+</EditForm>
+
 
 @code {
     public int Id { get; set; }
@@ -9,13 +30,13 @@
 
     protected override Task OnInitializedAsync()
     {
-        editing = AdultsData.GetAdultById(Id);
+        editing = Data.GetAdultById(Id);
         return base.OnInitializedAsync();
     }
 
-    private void SaveChanges()
+    private void Save()
     {
-        
+        Data.EditAdult(editing);
+        Nav.NavigateTo("/Adults");
     }
-
 }

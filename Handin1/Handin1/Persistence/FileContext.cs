@@ -23,7 +23,7 @@ namespace FileData
 
         private IList<T> ReadData<T>(string s)
         {
-            using (var jsonReader = File.OpenText(familiesFile))
+            using (var jsonReader = File.OpenText(s))
             {
                 return JsonSerializer.Deserialize<List<T>>(jsonReader.ReadToEnd());
             }
@@ -54,7 +54,11 @@ namespace FileData
 
         public void AddAdult(Adult adult)
         {
-            int nextId = Adults.Max(a => adult.Id);
+            int nextId = 0;
+            if (Adults.Max(a => adult.Id) != 0)
+            {
+                nextId = Adults.Max(a => adult.Id);
+            }
             adult.Id = ++nextId;
             Adults.Add(adult);
             SaveChanges();

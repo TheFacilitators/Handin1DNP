@@ -105,7 +105,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\AddAdult.razor"
+#line 29 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\AddAdult.razor"
        
     private Adult newAdult = new Adult();
 
@@ -114,6 +114,7 @@ using Models;
         Data.AddAdult(newAdult);
         Nav.NavigateTo("/Adults");
     }
+
 
 #line default
 #line hidden

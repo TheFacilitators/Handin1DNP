@@ -7,7 +7,7 @@ namespace Handin1.Data
     {
         IList<Adult> GetAllAdults();
 
-        void EditAdult(int id);
+        void EditAdult(Adult adult);
 
         Adult GetAdultById(int id);
 

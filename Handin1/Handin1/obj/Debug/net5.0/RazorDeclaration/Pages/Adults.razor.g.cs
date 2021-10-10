@@ -104,12 +104,11 @@ using Models;
         {
         }
         #pragma warning restore 1998
-
 #nullable restore
-#line 42 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
+#line 50 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
-    
+
     protected override Task OnInitializedAsync()
     {
         adults = Data.GetAllAdults();
