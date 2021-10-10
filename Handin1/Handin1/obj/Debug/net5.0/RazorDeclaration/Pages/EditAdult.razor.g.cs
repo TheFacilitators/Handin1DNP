@@ -96,7 +96,7 @@ using Handin1.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult/{Id:int}")]
     public partial class EditAdult : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,9 +105,9 @@ using Handin1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\EditAdult.razor"
+#line 38 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\EditAdult.razor"
        
-    public int Id { get; set; }
+    [Parameter] public int Id { get; set; }
     private Adult editing;
 
     protected override Task OnInitializedAsync()
@@ -121,6 +121,7 @@ using Handin1.Data;
         Data.EditAdult(editing);
         Nav.NavigateTo("/Adults");
     }
+
 
 #line default
 #line hidden

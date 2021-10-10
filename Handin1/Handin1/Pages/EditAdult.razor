@@ -1,31 +1,42 @@
-﻿@page "/EditAdult"
+﻿@page "/EditAdult/{Id:int}"
 @using Models
 @using Handin1.Data
 
 @inject IAdultsData Data
 @inject NavigationManager Nav
 
-<h3>Edit Adult</h3>
+<h3>Edit Adult by ID: @Id</h3>
 
-<EditForm Model="@editing" OnValidSubmit="@Save">
-    <DataAnnotationsValidator/>
-    <ValidationSummary/>
-    <div class="from-group">First name:<br/>
-        <InputTextArea rows="4" @bind-Value="editing.FirstName"/>
-    </div>
-    <div class="from-group">Last name:<br/>
-        <InputTextArea rows="4" @bind-Value="editing.LastName"/>
-    </div>
-    <div class="form-group">Age:<br/>
-        <InputNumber @bind-Value="editing.Age"></InputNumber></div>
-    <p class="actions">
-        <button class="btn btn-outline-dark" type="submit">Create</button>
-    </p>
-</EditForm>
+@if (editing == null)
+{
+    <p>No adult found with that ID</p>
+}
+else
+{
+    <EditForm Model="@editing" OnValidSubmit="@Save">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+        <div class="from-group">
+            First name:<br/>
+            <InputTextArea rows="4" @bind-Value="editing.FirstName"/>
+        </div>
+        <div class="from-group">
+            Last name:<br/>
+            <InputTextArea rows="4" @bind-Value="editing.LastName"/>
+        </div>
+        <div class="form-group">
+            Age:<br/>
+            <InputNumber @bind-Value="editing.Age"></InputNumber>
+        </div>
+        <p class="actions">
+            <button class="btn btn-outline-dark" type="submit">Save</button>
+        </p>
+    </EditForm>
+}
 
 
 @code {
-    public int Id { get; set; }
+    [Parameter] public int Id { get; set; }
     private Adult editing;
 
     protected override Task OnInitializedAsync()
@@ -39,4 +50,6 @@
         Data.EditAdult(editing);
         Nav.NavigateTo("/Adults");
     }
+
 }
+

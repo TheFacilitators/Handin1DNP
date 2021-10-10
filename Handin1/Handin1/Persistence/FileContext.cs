@@ -54,12 +54,7 @@ namespace FileData
 
         public void AddAdult(Adult adult)
         {
-            int nextId = 0;
-            if (Adults.Max(a => adult.Id) != 0)
-            {
-                nextId = Adults.Max(a => adult.Id);
-            }
-            adult.Id = ++nextId;
+            adult.Id = Adults.Count;
             Adults.Add(adult);
             SaveChanges();
         }
