@@ -17,7 +17,13 @@
         </tr>
         </thead>
         <tbody>
-     
+        
+          @foreach (var item in adults) {
+                    <tr>
+                       
+                    </tr>
+                }
+
         </tbody>
     </table>
 
@@ -34,5 +40,4 @@
     {
         nav.NavigateTo($"EditAdult/{id}");
     }
-
 }
