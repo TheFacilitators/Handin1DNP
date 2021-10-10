@@ -58,3 +58,5 @@ C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\ref\
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Handin1.pdb
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Handin1.genruntimeconfig.cache
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Handin1.csproj.CopyComplete
+C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\bin\Debug\net5.0\adults.json
+C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\bin\Debug\net5.0\families.json
