@@ -82,6 +82,20 @@ using Handin1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+using Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Adults")]
     public partial class Adults : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +104,27 @@ using Handin1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 30 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+       
+    private IList<Adult> adults;
+    
+    protected override Task OnInitializedAsync()
+    {
+        adults = AdultsData.GetAllAdults();
+        return base.OnInitializedAsync();
+    }
+
+    public void EditAdult(int id)
+    {
+        nav.NavigateTo($"EditAdult/{id}");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AdultsData AdultsData { get; set; }
     }
 }
 #pragma warning restore 1591

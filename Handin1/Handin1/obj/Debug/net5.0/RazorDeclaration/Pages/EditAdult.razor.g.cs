@@ -82,7 +82,21 @@ using Handin1.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult")]
+#nullable restore
+#line 2 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+using Handin1.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult/{Id:int}")]
     public partial class EditAdult : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,6 +104,27 @@ using Handin1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 31 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+       
+    public int Id { get; set; }
+    private Adult editing;
+
+    protected override async Task OnInitializedAsync()
+    {
+        editing = AdultsData.GetAdultById(Id);
+    }
+
+    private void SaveChanges()
+    {
+        
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IAdultsData AdultsData { get; set; }
     }
 }
 #pragma warning restore 1591
