@@ -1,6 +1,45 @@
-﻿@page "/EditAdult"
-<h3>Edit Adult</h3>
+﻿@page "/EditAdult/{Id:int}"
+@using Models
+@using Handin1.Data
+@inject IAdultsData AdultsData
+
+<h3>Edit Adult by ID: @Id</h3>
+
+@if (editing == null)
+{
+    <em>Adult not found</em>
+}
+else
+{
+    <EditForm Model="@editing" OnValidSubmit="@SaveChanges">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+        <div class="form-group">
+            ID:<br/>
+            <InputNumber @bind-Value="editing.Id"/>
+        </div>
+        <div class="form-group">
+            First name:<br/>
+            <InputTextArea @bind-Value="editing.FirstName"/>
+        </div>
+        <p class="actions">
+            <button class="btn btn-outline-dark" type="submit">Save</button>
+        </p>
+    </EditForm>
+}
 
 @code {
-    
+    public int Id { get; set; }
+    private Adult editing;
+
+    protected override async Task OnInitializedAsync()
+    {
+        editing = AdultsData.GetAdultById(Id);
+    }
+
+    private void SaveChanges()
+    {
+        
+    }
+
 }

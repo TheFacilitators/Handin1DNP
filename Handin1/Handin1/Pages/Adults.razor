@@ -1,4 +1,10 @@
 ﻿@page "/Adults"
+
+@using Data
+@using Models
+@inject AdultsData AdultsData
+@inject NavigationManager nav
+
 <h3>Adults</h3>
 
 <table class="table">
@@ -16,5 +22,17 @@
     </table>
 
 @code {
+    private IList<Adult> adults;
     
+    protected override Task OnInitializedAsync()
+    {
+        adults = AdultsData.GetAllAdults();
+        return base.OnInitializedAsync();
+    }
+
+    public void EditAdult(int id)
+    {
+        nav.NavigateTo($"EditAdult/{id}");
+    }
+
 }
