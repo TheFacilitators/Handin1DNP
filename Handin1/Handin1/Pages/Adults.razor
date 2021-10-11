@@ -7,6 +7,14 @@
 
 <h3>Adults</h3>
 
+<p>Adults</p>
+<p>
+    Filter by name: <input type="text" @oninput="((arg) => FilterByName(arg)" style="width: 100px"/>
+</p>
+<p>
+    Filter by age: <input type="number" @oninput="((arg) => FilterByAge(arg)" style="width: 50px"/>
+</p>
+
 <table class="table">
         <thead>
         <tr>
@@ -49,6 +57,10 @@
         
 @code {
     private IList<Adult> adults;
+    private IList<Adult> displayed;
+
+    private string filterByName;
+    private int? filterByAge;
 
     protected override Task OnInitializedAsync()
     {
@@ -64,5 +76,24 @@
     private void RemoveAdult(int id)
     {
         Data.RemoveAdult(id);
+    }
+
+    private void FilterByName(ChangeEventArgs arg)
+    {
+        filterByName = "";
+        try
+        {
+            
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    private void FilterByAge(int age)
+    {
+        
     }
 }
