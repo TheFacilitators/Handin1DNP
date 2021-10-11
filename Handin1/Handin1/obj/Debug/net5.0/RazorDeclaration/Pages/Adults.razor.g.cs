@@ -132,7 +132,7 @@ using Models;
 
     private void FilterByName(ChangeEventArgs arg)
     {
-        filterByName = null;
+        filterByName = "";
         try
         {
             filterByName = arg.Value.ToString();
@@ -161,7 +161,7 @@ using Models;
     private void ExecuteFilter()
     {
         displayed = adults.Where(a =>
-            ((filterByName != null && (a.FirstName == filterByName || a.LastName == filterByName) || filterByName == null)) &&
+            ((filterByName != "" && (a.FirstName == filterByName || a.LastName == filterByName) || filterByName == "")) &&
             (filterByAge != null && a.Age == filterByAge || filterByAge == null)).ToList();
     }
 
