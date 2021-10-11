@@ -13,84 +13,84 @@ namespace Handin1.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 1 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 2 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 3 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 4 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 5 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 6 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 7 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 8 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 9 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Handin1;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\_Imports.razor"
+#line 10 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\_Imports.razor"
 using Handin1.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 3 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
 using Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 4 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
 using Models;
 
 #line default
@@ -105,26 +105,31 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 50 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
-    
+
     protected override Task OnInitializedAsync()
     {
-        adults = AdultsData.GetAllAdults();
+        adults = Data.GetAllAdults();
         return base.OnInitializedAsync();
     }
 
-    public void EditAdult(int id)
+    private void EditAdult(int id)
     {
-        nav.NavigateTo($"EditAdult/{id}");
+        Nav.NavigateTo($"EditAdult/{id}");
+    }
+
+    private void RemoveAdult(int id)
+    {
+        Data.RemoveAdult(id);
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AdultsData AdultsData { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager Nav { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IAdultsData Data { get; set; }
     }
 }
 #pragma warning restore 1591

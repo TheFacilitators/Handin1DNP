@@ -28,7 +28,7 @@ namespace Handin1
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddScoped<IAdultsData, AdultsData>();
+            services.AddSingleton<IAdultsData, AdultsData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,26 +1,32 @@
 ﻿@page "/EditAdult/{Id:int}"
 @using Models
 @using Handin1.Data
-@inject IAdultsData AdultsData
+
+@inject IAdultsData Data
+@inject NavigationManager Nav
 
 <h3>Edit Adult by ID: @Id</h3>
 
 @if (editing == null)
 {
-    <em>Adult not found</em>
+    <p>No adult found with that ID</p>
 }
 else
 {
-    <EditForm Model="@editing" OnValidSubmit="@SaveChanges">
+    <EditForm Model="@editing" OnValidSubmit="@Save">
         <DataAnnotationsValidator/>
         <ValidationSummary/>
-        <div class="form-group">
-            ID:<br/>
-            <InputNumber @bind-Value="editing.Id"/>
+        <div class="from-group">
+            First name:<br/>
+            <InputTextArea rows="4" @bind-Value="editing.FirstName"/>
+        </div>
+        <div class="from-group">
+            Last name:<br/>
+            <InputTextArea rows="4" @bind-Value="editing.LastName"/>
         </div>
         <div class="form-group">
-            First name:<br/>
-            <InputTextArea @bind-Value="editing.FirstName"/>
+            Age:<br/>
+            <InputNumber @bind-Value="editing.Age"></InputNumber>
         </div>
         <p class="actions">
             <button class="btn btn-outline-dark" type="submit">Save</button>
@@ -28,18 +34,22 @@ else
     </EditForm>
 }
 
+
 @code {
-    public int Id { get; set; }
+    [Parameter] public int Id { get; set; }
     private Adult editing;
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
-        editing = AdultsData.GetAdultById(Id);
+        editing = Data.GetAdultById(Id);
+        return base.OnInitializedAsync();
     }
 
-    private void SaveChanges()
+    private void Save()
     {
-        
+        Data.EditAdult(editing);
+        Nav.NavigateTo("/Adults");
     }
 
 }
+

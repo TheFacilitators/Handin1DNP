@@ -1,7 +1,7 @@
 ﻿
-
 using System.Collections.Generic;
 using System.Linq;
+using FileData;
 using Models;
 
 namespace Handin1.Data
@@ -27,9 +27,19 @@ namespace Handin1.Data
             return adults.FirstOrDefault(a => a.Id == id);
         }
 
-        public void EditAdult(int id)
+        public void EditAdult(Adult adult)
         {
-            file.SaveChanges();
+            file.EditAdult(adult);
+        }
+
+        public void RemoveAdult(int id)
+        {
+            file.RemoveAdult(GetAdultById(id));
+        }
+
+        public void AddAdult(Adult adult)
+        {
+            file.AddAdult(adult);
         }
     }
 }

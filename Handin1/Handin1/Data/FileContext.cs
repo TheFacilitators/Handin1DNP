@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using Models;
 
@@ -8,15 +9,15 @@ namespace Handin1.Data
 {
     public class FileContext
     {
-        public IList<Family> Families { get; private set; }
+        //public IList<Family> Families { get; private set; }
         public IList<Adult> Adults { get; private set; }
 
-        private readonly string familiesFile = "families.json";
+        //private readonly string familiesFile = "families.json";
         private readonly string adultsFile = "adults.json";
 
         public FileContext()
         {
-            Families = File.Exists(familiesFile) ? ReadData<Family>(familiesFile) : new List<Family>();
+            //Families = File.Exists(familiesFile) ? ReadData<Family>(familiesFile) : new List<Family>();
             Adults = File.Exists(adultsFile) ? ReadData<Adult>(adultsFile) : new List<Adult>();
         }
 
@@ -31,14 +32,14 @@ namespace Handin1.Data
         public void SaveChanges()
         {
             // storing families
-            string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions
+            /*string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions
             {
                 WriteIndented = true
             });
             using (StreamWriter outputFile = new StreamWriter(familiesFile, false))
             {
                 outputFile.Write(jsonFamilies);
-            }
+            }*/
 
             // storing persons
             string jsonAdults = JsonSerializer.Serialize(Adults, new JsonSerializerOptions
@@ -49,6 +50,29 @@ namespace Handin1.Data
             {
                 outputFile.Write(jsonAdults);
             }
+        }
+
+        public void AddAdult(Adult adult)
+        {
+            adult.Id = Adults.Count;
+            Adults.Add(adult);
+            SaveChanges();
+        }
+
+        public void EditAdult(Adult adult)
+        {
+            Adult e = Adults.First(a => a.Id == adult.Id);
+            e.FirstName = adult.FirstName;
+            e.LastName = adult.LastName;
+            e.Age = adult.Age;
+            SaveChanges();
+        }
+
+        public void RemoveAdult(Adult adult)
+        {
+            Adult r = Adults.First(a => a.Id == adult.Id);
+            Adults.Remove(r);
+            SaveChanges();
         }
     }
 }

@@ -2,42 +2,98 @@
 
 @using Data
 @using Models
-@inject AdultsData AdultsData
-@inject NavigationManager nav
+@inject IAdultsData Data
+@inject NavigationManager Nav
 
 <h3>Adults</h3>
+
+<p>Adults</p>
+<p>
+    Filter by name: <input type="text" @oninput="((arg) => FilterByName(arg)" style="width: 100px"/>
+</p>
+<p>
+    Filter by age: <input type="number" @oninput="((arg) => FilterByAge(arg)" style="width: 50px"/>
+</p>
 
 <table class="table">
         <thead>
         <tr>
             <th>Person ID</th>
-            <th>Name ID</th>
+            <th>First name</th>
             <th>Surname</th>
             <th>Age</th>
         </tr>
         </thead>
         <tbody>
         
-          @foreach (var item in adults) {
-                    <tr>
-                       
-                    </tr>
-                }
-
+        
+        @if (adults.Count == 0)
+        {
+            <p>No adults around</p>
+        }
+       
+        @foreach (var item in adults)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Age</td>
+                <td>
+                    <button @onclick="@(() => EditAdult(item.Id))">
+                        <i class="oi oi-pencil"></i>
+                    </button>
+                </td>
+                <td>
+                    <button @onclick="@(() => RemoveAdult(item.Id))">
+                        <i class="oi oi-trash" style="color: red"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+        
         </tbody>
     </table>
-
+        
 @code {
     private IList<Adult> adults;
-    
+    private IList<Adult> displayed;
+
+    private string filterByName;
+    private int? filterByAge;
+
     protected override Task OnInitializedAsync()
     {
-        adults = AdultsData.GetAllAdults();
+        adults = Data.GetAllAdults();
         return base.OnInitializedAsync();
     }
 
-    public void EditAdult(int id)
+    private void EditAdult(int id)
     {
-        nav.NavigateTo($"EditAdult/{id}");
+        Nav.NavigateTo($"EditAdult/{id}");
+    }
+
+    private void RemoveAdult(int id)
+    {
+        Data.RemoveAdult(id);
+    }
+
+    private void FilterByName(ChangeEventArgs arg)
+    {
+        filterByName = "";
+        try
+        {
+            
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    private void FilterByAge(int age)
+    {
+        
     }
 }

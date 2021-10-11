@@ -1,6 +1,38 @@
 ﻿@page "/AddAdult"
+@using Handin1.Data
+@using Models
+
+@inject IAdultsData Data
+@inject NavigationManager Nav
+
 <h3>Add Adult</h3>
+<EditForm Model="@newAdult" OnValidSubmit="@AddNewAdult">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="from-group">
+        First name:<br/>
+        <InputTextArea rows="2" @bind-Value="newAdult.FirstName"/>
+    </div>
+    <div class="from-group">
+        Last name:<br/>
+        <InputTextArea rows="2" @bind-Value="newAdult.LastName"/>
+    </div>
+    <div class="form-group">
+        Age:<br/>
+        <InputNumber @bind-Value="newAdult.Age"/>
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+    </p>
+</EditForm>
 
 @code {
-    
+    private Adult newAdult = new Adult();
+
+    private void AddNewAdult()
+    {
+        Data.AddAdult(newAdult);
+        Nav.NavigateTo("/Adults");
+    }
+
 }
