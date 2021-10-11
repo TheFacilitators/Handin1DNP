@@ -27,31 +27,36 @@
         <tbody>
         
         
-        @if (adults.Count == 0)
+        @if (displayed == null)
         {
-            <p>No adults around</p>
+            <p>Loading...</p>
         }
-       
-        @foreach (var item in adults)
+        else if (!displayed.Any())
         {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.FirstName</td>
-                <td>@item.LastName</td>
-                <td>@item.Age</td>
-                <td>
-                    <button @onclick="@(() => EditAdult(item.Id))">
-                        <i class="oi oi-pencil"></i>
-                    </button>
-                </td>
-                <td>
-                    <button @onclick="@(() => RemoveAdult(item.Id))">
-                        <i class="oi oi-trash" style="color: red"></i>
-                    </button>
-                </td>
-            </tr>
+            <p>No adults match the criteria</p>
         }
-        
+        else
+        {
+            @foreach (var item in displayed)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Age</td>
+                    <td>
+                        <button @onclick="@(() => EditAdult(item.Id))">
+                            <i class="oi oi-pencil"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button @onclick="@(() => RemoveAdult(item.Id))">
+                            <i class="oi oi-trash" style="color: red"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
         </tbody>
     </table>
         
@@ -65,6 +70,7 @@
     protected override Task OnInitializedAsync()
     {
         adults = Data.GetAllAdults();
+        displayed = adults;
         return base.OnInitializedAsync();
     }
 
@@ -83,12 +89,13 @@
         filterByName = null;
         try
         {
-            filterByName = arg.ToString();
+            filterByName = arg.Value.ToString();
         }
         catch (Exception e)
         {
             //
         }
+        ExecuteFilter();
     }
 
     private void FilterByAge(ChangeEventArgs arg)
@@ -102,5 +109,13 @@
         {
             //
         }
+        ExecuteFilter();
+    }
+
+    private void ExecuteFilter()
+    {
+        displayed = adults.Where(a =>
+            ((filterByName != null && (a.FirstName == filterByName || a.LastName == filterByName) || filterByName == null)) &&
+            (filterByAge != null && a.Age == filterByAge || filterByAge == null)).ToList();
     }
 }

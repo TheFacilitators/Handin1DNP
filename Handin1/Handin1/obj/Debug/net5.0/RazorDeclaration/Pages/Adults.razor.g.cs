@@ -105,7 +105,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 58 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
+#line 63 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
     private IList<Adult> displayed;
@@ -116,6 +116,7 @@ using Models;
     protected override Task OnInitializedAsync()
     {
         adults = Data.GetAllAdults();
+        displayed = adults;
         return base.OnInitializedAsync();
     }
 
@@ -134,12 +135,13 @@ using Models;
         filterByName = null;
         try
         {
-            filterByName = arg.ToString();
+            filterByName = arg.Value.ToString();
         }
         catch (Exception e)
         {
             //
         }
+        ExecuteFilter();
     }
 
     private void FilterByAge(ChangeEventArgs arg)
@@ -153,6 +155,14 @@ using Models;
         {
             //
         }
+        ExecuteFilter();
+    }
+
+    private void ExecuteFilter()
+    {
+        displayed = adults.Where(a =>
+            ((filterByName != null && (a.FirstName == filterByName || a.LastName == filterByName) || filterByName == null)) &&
+            (filterByAge != null && a.Age == filterByAge || filterByAge == null)).ToList();
     }
 
 #line default
