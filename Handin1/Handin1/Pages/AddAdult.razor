@@ -1,6 +1,7 @@
 ﻿@page "/AddAdult"
 @using Handin1.Data
 @using Models
+@* @attribute [Authorize(Policy = "MustBeLoggedIn")] *@
 
 @inject IAdultsData Data
 @inject NavigationManager Nav

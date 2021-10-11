@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Handin1.Shared
+namespace LoginComponent
 {
     #line hidden
     using System;
@@ -83,13 +83,14 @@ using Handin1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Shared\MainLayout.razor"
-using LoginComponent;
+#line 3 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Login.razor"
+using Handin1.Authentication;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
+    public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,27 +98,47 @@ using LoginComponent;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Shared\MainLayout.razor"
-      
+#line 31 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Login.razor"
+       
+    private string username;
+    private string password;
+    private string errorMessage;
 
-    [CascadingParameter]
-    protected Task<AuthenticationState> AuthStat { get; set; }
-
-    protected override async Task OnInitializedAsync()
+    public async Task PerformLogin()
     {
-        await base.OnInitializedAsync();
-        var user = (await AuthStat).User;
-        if (!user.Identity.IsAuthenticated)
+        errorMessage = "";
+        try
         {
-            NavigationManager.NavigateTo($"/Login");
+            ((Authenticator) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
         }
     }
 
+    public async Task PerformLogout()
+    {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try
+        {
+            ((Authenticator) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+        }
+    }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

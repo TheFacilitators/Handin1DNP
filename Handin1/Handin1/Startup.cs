@@ -1,10 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Handin1.Authentication;
 using Handin1.Data;
+using Handin1.Data.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +33,13 @@ namespace Handin1
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<IAdultsData, AdultsData>();
+            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddScoped<AuthenticationStateProvider, Authenticator>();
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MustBeLoggedIn", a =>
+                    a.RequireAuthenticatedUser().RequireClaim(ClaimTypes.Name));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

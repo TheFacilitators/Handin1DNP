@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj": {}
+    "C:\\Users\\jodyc\\RiderProjects\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj": {
+    "C:\\Users\\jodyc\\RiderProjects\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj",
+        "projectUniqueName": "C:\\Users\\jodyc\\RiderProjects\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj",
         "projectName": "Handin1",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\Handin1.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\DNP1\\Handin1\\Handin1\\Handin1\\obj\\",
+        "projectPath": "C:\\Users\\jodyc\\RiderProjects\\Handin1DNP\\Handin1\\Handin1\\Handin1.csproj",
+        "packagesPath": "C:\\Users\\jodyc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jodyc\\RiderProjects\\Handin1DNP\\Handin1\\Handin1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jodyc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
