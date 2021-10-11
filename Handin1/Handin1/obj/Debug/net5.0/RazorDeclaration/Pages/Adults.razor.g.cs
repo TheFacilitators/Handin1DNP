@@ -105,9 +105,13 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
+#line 58 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
+    private IList<Adult> displayed;
+
+    private string filterByName;
+    private int? filterByAge;
 
     protected override Task OnInitializedAsync()
     {
@@ -123,6 +127,24 @@ using Models;
     private void RemoveAdult(int id)
     {
         Data.RemoveAdult(id);
+    }
+
+    private void FilterByName(ChangeEventArgs arg)
+    {
+        filterByName = null;
+        try
+        {
+            
+        }
+        catch (Exception e)
+        {
+            
+        }
+    }
+
+    private void FilterByAge(ChangeEventArgs arg)
+    {
+        
     }
 
 #line default
