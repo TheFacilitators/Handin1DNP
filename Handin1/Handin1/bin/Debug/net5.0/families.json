@@ -11,12 +11,7 @@
         "Id": 0,
         "FirstName": "Yasmine",
         "LastName": "Baxter",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 58,
-        "Weight": 39.8,
-        "Height": 174,
-        "Sex": "F"
+        "Age": 58
       }
     ],
     "Children": [],
@@ -34,12 +29,7 @@
         "Id": 1,
         "FirstName": "Lyla",
         "LastName": "Humphrey",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 36,
-        "Weight": 64.8,
-        "Height": 147,
-        "Sex": "F"
+        "Age": 36
       },
       {
         "JobTitle": {
@@ -49,12 +39,7 @@
         "Id": 2,
         "FirstName": "Samara",
         "LastName": "Humphrey",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 34,
-        "Weight": 37,
-        "Height": 145,
-        "Sex": "F"
+        "Age": 34
       }
     ],
     "Children": [
@@ -77,12 +62,7 @@
         "Id": 1,
         "FirstName": "Frederick",
         "LastName": "Humphrey",
-        "HairColor": "Black",
-        "EyeColor": "Amber",
-        "Age": 10,
-        "Weight": 35,
-        "Height": 155,
-        "Sex": "M"
+        "Age": 10
       },
       {
         "Interests": [
@@ -99,12 +79,7 @@
         "Id": 2,
         "FirstName": "Leopold",
         "LastName": "Humphrey",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 6,
-        "Weight": 85.1,
-        "Height": 130,
-        "Sex": "M"
+        "Age": 6
       },
       {
         "Interests": [
@@ -133,12 +108,7 @@
         "Id": 3,
         "FirstName": "Chiara",
         "LastName": "Humphrey",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 15,
-        "Weight": 84.405,
-        "Height": 183,
-        "Sex": "F"
+        "Age": 15
       }
     ],
     "Pets": []
@@ -155,12 +125,7 @@
         "Id": 3,
         "FirstName": "Chaya",
         "LastName": "Mcclure",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 59,
-        "Weight": 32.4,
-        "Height": 167,
-        "Sex": "F"
+        "Age": 59
       },
       {
         "JobTitle": {
@@ -170,12 +135,7 @@
         "Id": 4,
         "FirstName": "Ophelia",
         "LastName": "Nathan",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 50,
-        "Weight": 106,
-        "Height": 172,
-        "Sex": "F"
+        "Age": 50
       }
     ],
     "Children": [
@@ -194,12 +154,7 @@
         "Id": 4,
         "FirstName": "Meredith",
         "LastName": "Mcclure",
-        "HairColor": "Black",
-        "EyeColor": "Grey",
-        "Age": 24,
-        "Weight": 45.73,
-        "Height": 147,
-        "Sex": "F"
+        "Age": 24
       },
       {
         "Interests": [
@@ -212,12 +167,7 @@
         "Id": 5,
         "FirstName": "Aria",
         "LastName": "Mcclure",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 5,
-        "Weight": 16.32,
-        "Height": 96,
-        "Sex": "F"
+        "Age": 5
       },
       {
         "Interests": [
@@ -238,12 +188,7 @@
         "Id": 6,
         "FirstName": "Reyes",
         "LastName": "Mcclure",
-        "HairColor": "Grey",
-        "EyeColor": "Brown",
-        "Age": 27,
-        "Weight": 60,
-        "Height": 170,
-        "Sex": "M"
+        "Age": 27
       }
     ],
     "Pets": [
@@ -273,12 +218,7 @@
         "Id": 5,
         "FirstName": "Soham",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Grey",
-        "Age": 48,
-        "Weight": 131.6,
-        "Height": 177,
-        "Sex": "M"
+        "Age": 48
       },
       {
         "JobTitle": {
@@ -288,12 +228,7 @@
         "Id": 6,
         "FirstName": "Anastasia",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 44,
-        "Weight": 99.8,
-        "Height": 147,
-        "Sex": "F"
+        "Age": 44
       }
     ],
     "Children": [
@@ -312,12 +247,7 @@
         "Id": 7,
         "FirstName": "Lionel",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 3,
-        "Weight": 31.4,
-        "Height": 86,
-        "Sex": "M"
+        "Age": 3
       },
       {
         "Interests": [
@@ -330,12 +260,7 @@
         "Id": 8,
         "FirstName": "Natalee",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Hazel",
-        "Age": 21,
-        "Weight": 59.84,
-        "Height": 166,
-        "Sex": "F"
+        "Age": 21
       },
       {
         "Interests": [
@@ -367,12 +292,7 @@
         "Id": 9,
         "FirstName": "Caliyah",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 8,
-        "Weight": 45.73,
-        "Height": 127,
-        "Sex": "F"
+        "Age": 8
       },
       {
         "Interests": [
@@ -401,12 +321,7 @@
         "Id": 10,
         "FirstName": "Camilla",
         "LastName": "Fitzgerald",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 16,
-        "Weight": 50.32,
-        "Height": 138,
-        "Sex": "F"
+        "Age": 16
       }
     ],
     "Pets": []
@@ -423,12 +338,7 @@
         "Id": 7,
         "FirstName": "Cataleya",
         "LastName": "Mcintyre",
-        "HairColor": "Blond",
-        "EyeColor": "Blue",
-        "Age": 52,
-        "Weight": 56.8,
-        "Height": 172,
-        "Sex": "F"
+        "Age": 52
       },
       {
         "JobTitle": {
@@ -438,12 +348,7 @@
         "Id": 8,
         "FirstName": "Andi",
         "LastName": "Wells",
-        "HairColor": "Brown",
-        "EyeColor": "Amber",
-        "Age": 42,
-        "Weight": 27.6,
-        "Height": 148,
-        "Sex": "F"
+        "Age": 42
       }
     ],
     "Children": [
@@ -462,12 +367,7 @@
         "Id": 11,
         "FirstName": "Ellison",
         "LastName": "Mcintyre",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 20,
-        "Weight": 81.2,
-        "Height": 174,
-        "Sex": "M"
+        "Age": 20
       },
       {
         "Interests": [
@@ -488,12 +388,7 @@
         "Id": 12,
         "FirstName": "Renato",
         "LastName": "Mcintyre",
-        "HairColor": "Brown",
-        "EyeColor": "Brown",
-        "Age": 19,
-        "Weight": 132,
-        "Height": 175,
-        "Sex": "M"
+        "Age": 19
       },
       {
         "Interests": [
@@ -514,12 +409,7 @@
         "Id": 13,
         "FirstName": "Leila",
         "LastName": "Mcintyre",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 13,
-        "Weight": 27.54,
-        "Height": 157,
-        "Sex": "F"
+        "Age": 13
       },
       {
         "Interests": [
@@ -540,12 +430,7 @@
         "Id": 14,
         "FirstName": "Paul",
         "LastName": "Mcintyre",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 21,
-        "Weight": 75.5,
-        "Height": 157,
-        "Sex": "M"
+        "Age": 21
       },
       {
         "Interests": [
@@ -570,12 +455,7 @@
         "Id": 15,
         "FirstName": "Ace",
         "LastName": "Mcintyre",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 10,
-        "Weight": 30.8,
-        "Height": 149,
-        "Sex": "M"
+        "Age": 10
       },
       {
         "Interests": [
@@ -588,12 +468,7 @@
         "Id": 16,
         "FirstName": "Ervin",
         "LastName": "Mcintyre",
-        "HairColor": "Blond",
-        "EyeColor": "Blue",
-        "Age": 1,
-        "Weight": 12.8,
-        "Height": 69,
-        "Sex": "M"
+        "Age": 1
       }
     ],
     "Pets": []
@@ -610,12 +485,7 @@
         "Id": 9,
         "FirstName": "Genevieve",
         "LastName": "Cruz",
-        "HairColor": "Leverpostej",
-        "EyeColor": "Brown",
-        "Age": 46,
-        "Weight": 102.5,
-        "Height": 164,
-        "Sex": "F"
+        "Age": 46
       },
       {
         "JobTitle": {
@@ -625,12 +495,7 @@
         "Id": 10,
         "FirstName": "Lester",
         "LastName": "Cruz",
-        "HairColor": "White",
-        "EyeColor": "Amber",
-        "Age": 39,
-        "Weight": 126.2,
-        "Height": 179,
-        "Sex": "M"
+        "Age": 39
       }
     ],
     "Children": [
@@ -660,12 +525,7 @@
         "Id": 17,
         "FirstName": "Harlie",
         "LastName": "Cruz",
-        "HairColor": "Brown",
-        "EyeColor": "Grey",
-        "Age": 13,
-        "Weight": 23.12,
-        "Height": 141,
-        "Sex": "F"
+        "Age": 13
       },
       {
         "Interests": [
@@ -693,12 +553,7 @@
         "Id": 18,
         "FirstName": "Blake",
         "LastName": "Cruz",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 11,
-        "Weight": 42.670002,
-        "Height": 133,
-        "Sex": "F"
+        "Age": 11
       },
       {
         "Interests": [
@@ -723,12 +578,7 @@
         "Id": 19,
         "FirstName": "Izayah",
         "LastName": "Cruz",
-        "HairColor": "Brown",
-        "EyeColor": "Brown",
-        "Age": 15,
-        "Weight": 69.2,
-        "Height": 163,
-        "Sex": "M"
+        "Age": 15
       },
       {
         "Interests": [
@@ -749,12 +599,7 @@
         "Id": 20,
         "FirstName": "Donte",
         "LastName": "Cruz",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 17,
-        "Weight": 83.4,
-        "Height": 181,
-        "Sex": "M"
+        "Age": 17
       }
     ],
     "Pets": [
@@ -778,12 +623,7 @@
         "Id": 11,
         "FirstName": "Zahra",
         "LastName": "Salt",
-        "HairColor": "Brown",
-        "EyeColor": "Grey",
-        "Age": 32,
-        "Weight": 124.2,
-        "Height": 174,
-        "Sex": "F"
+        "Age": 32
       }
     ],
     "Children": [
@@ -806,12 +646,7 @@
         "Id": 21,
         "FirstName": "Sanvi",
         "LastName": "Salt",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 12,
-        "Weight": 27.54,
-        "Height": 152,
-        "Sex": "F"
+        "Age": 12
       },
       {
         "Interests": [
@@ -835,12 +670,7 @@
         "Id": 22,
         "FirstName": "Ezequiel",
         "LastName": "Salt",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 2,
-        "Weight": 18,
-        "Height": 75,
-        "Sex": "M"
+        "Age": 2
       },
       {
         "Interests": [
@@ -861,12 +691,7 @@
         "Id": 23,
         "FirstName": "Estela",
         "LastName": "Salt",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 14,
-        "Weight": 86.02,
-        "Height": 153,
-        "Sex": "F"
+        "Age": 14
       }
     ],
     "Pets": [
@@ -890,12 +715,7 @@
         "Id": 12,
         "FirstName": "Zavier",
         "LastName": "Huffman",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 59,
-        "Weight": 54.4,
-        "Height": 166,
-        "Sex": "M"
+        "Age": 59
       }
     ],
     "Children": [
@@ -930,12 +750,7 @@
         "Id": 24,
         "FirstName": "Ellie",
         "LastName": "Huffman",
-        "HairColor": "Black",
-        "EyeColor": "Hazel",
-        "Age": 0,
-        "Weight": 9.01,
-        "Height": 53,
-        "Sex": "F"
+        "Age": 0
       },
       {
         "Interests": [
@@ -948,12 +763,7 @@
         "Id": 25,
         "FirstName": "Anaiyah",
         "LastName": "Huffman",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 40,
-        "Weight": 55.93,
-        "Height": 152,
-        "Sex": "F"
+        "Age": 40
       }
     ],
     "Pets": []
@@ -970,12 +780,7 @@
         "Id": 13,
         "FirstName": "Arley",
         "LastName": "Vaughn",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 33,
-        "Weight": 55.4,
-        "Height": 171,
-        "Sex": "M"
+        "Age": 33
       }
     ],
     "Children": [
@@ -1002,12 +807,7 @@
         "Id": 26,
         "FirstName": "Fisher",
         "LastName": "Vaughn",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 2,
-        "Weight": 16.6,
-        "Height": 78,
-        "Sex": "M"
+        "Age": 2
       },
       {
         "Interests": [
@@ -1020,12 +820,7 @@
         "Id": 27,
         "FirstName": "Noelia",
         "LastName": "Vaughn",
-        "HairColor": "Blue",
-        "EyeColor": "Brown",
-        "Age": 13,
-        "Weight": 24.14,
-        "Height": 137,
-        "Sex": "F"
+        "Age": 13
       },
       {
         "Interests": [
@@ -1046,12 +841,7 @@
         "Id": 28,
         "FirstName": "Anthony",
         "LastName": "Vaughn",
-        "HairColor": "Brown",
-        "EyeColor": "Blue",
-        "Age": 13,
-        "Weight": 48.2,
-        "Height": 133,
-        "Sex": "M"
+        "Age": 13
       },
       {
         "Interests": [
@@ -1072,12 +862,7 @@
         "Id": 29,
         "FirstName": "Max",
         "LastName": "Vaughn",
-        "HairColor": "Grey",
-        "EyeColor": "Brown",
-        "Age": 4,
-        "Weight": 40.8,
-        "Height": 117,
-        "Sex": "M"
+        "Age": 4
       },
       {
         "Interests": [
@@ -1110,12 +895,7 @@
         "Id": 30,
         "FirstName": "Eitan",
         "LastName": "Vaughn",
-        "HairColor": "Black",
-        "EyeColor": "Blue",
-        "Age": 15,
-        "Weight": 94.2,
-        "Height": 160,
-        "Sex": "M"
+        "Age": 15
       }
     ],
     "Pets": []
@@ -1132,12 +912,7 @@
         "Id": 14,
         "FirstName": "Isiah",
         "LastName": "Esparza",
-        "HairColor": "Brown",
-        "EyeColor": "Brown",
-        "Age": 44,
-        "Weight": 81.8,
-        "Height": 172,
-        "Sex": "M"
+        "Age": 44
       }
     ],
     "Children": [
@@ -1176,12 +951,7 @@
         "Id": 31,
         "FirstName": "Audriana",
         "LastName": "Esparza",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 13,
-        "Weight": 45.73,
-        "Height": 157,
-        "Sex": "F"
+        "Age": 13
       }
     ],
     "Pets": []

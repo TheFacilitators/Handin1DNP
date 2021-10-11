@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using Models;
 
@@ -49,6 +50,22 @@ namespace FileData
             {
                 outputFile.Write(jsonAdults);
             }
+        }
+
+        public void AddAdult(Adult a) {
+            Adults.Add(a);
+            SaveChanges();
+        }
+
+        public void EditAdult(Adult adult) {
+           Adult temp = Adults.First(a => a.Id == adult.Id);
+           temp = adult;
+           SaveChanges();
+        }
+
+        public void RemoveAdult(int id) {
+            Adults.Remove(Adults.First(a => a.Id == id));
+            SaveChanges();
         }
     }
 }

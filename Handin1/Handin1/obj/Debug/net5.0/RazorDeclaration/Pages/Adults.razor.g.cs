@@ -105,9 +105,17 @@ using Handin1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 51 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
+
+    private void RemoveAdult(int id) {
+        AdultData.RemoveAdult(id);
+    }
+
+    private void EditAdult(int id) {
+        NavMag.NavigateTo($"EditAdult/{id}");
+    }
 
     protected override async Task OnInitializedAsync() {
         adults = AdultData.GetAdults();
@@ -117,6 +125,7 @@ using Handin1.Data;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavMag { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IAdultData AdultData { get; set; }
     }
 }

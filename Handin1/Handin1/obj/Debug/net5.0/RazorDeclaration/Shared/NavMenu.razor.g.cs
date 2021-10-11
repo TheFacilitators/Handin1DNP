@@ -90,7 +90,7 @@ using Handin1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Shared\NavMenu.razor"
+#line 30 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

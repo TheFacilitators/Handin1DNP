@@ -1,6 +1,49 @@
-﻿@page "/EditAdult"
-<h3>Edit Adult</h3>
+﻿@page "/EditAdult/{Id:int}"
+@using Models
+@using Handin1.Data
+
+@inject IAdultData AdultData
+@inject NavigationManager NavMag
+
+<h3>Edit Adult with Id @Id</h3>
+
+@if (editedAdult == null) {
+    <p>Adult with such Id not found</p>
+}
+else {
+
+<EditForm Model="@editedAdult" OnValidSubmit="@Edit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group"> First name:<br/>
+        <InputTextArea @bind-Value="editedAdult.FirstName"/>
+    </div>
+    <div class="form-group"> Last name:<br/>
+        <InputTextArea @bind-Value="editedAdult.LastName"/>
+    </div>
+    <div class="form-group"> Age:<br/>
+        <InputNumber @bind-Value="editedAdult.Age"/>
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Save</button>
+    </p>
+</EditForm>
+}
 
 @code {
-    
+
+    private Adult editedAdult = new Adult();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        editedAdult = AdultData.GetById(Id);
+    }
+
+    private void Edit() {
+        AdultData.EditAdult(editedAdult);
+        NavMag.NavigateTo("/Adults");
+    }
+
 }

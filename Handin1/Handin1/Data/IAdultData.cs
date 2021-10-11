@@ -10,6 +10,8 @@ namespace Handin1.Data {
 
         void EditAdult(Adult adult);
 
-        void RemoveTodo(int id);
+        void RemoveAdult(int id);
+
+        Adult GetById(int id);
     }
 }

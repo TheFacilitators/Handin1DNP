@@ -82,7 +82,21 @@ using Handin1.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult")]
+#nullable restore
+#line 2 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+using Handin1.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult/{Id:int}")]
     public partial class EditAdult : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,6 +104,30 @@ using Handin1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 33 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+       
+
+    private Adult editedAdult = new Adult();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        editedAdult = AdultData.GetById(Id);
+    }
+
+    private void Edit() {
+        AdultData.EditAdult(editedAdult);
+        NavMag.NavigateTo("/Adults");
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavMag { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IAdultData AdultData { get; set; }
     }
 }
 #pragma warning restore 1591

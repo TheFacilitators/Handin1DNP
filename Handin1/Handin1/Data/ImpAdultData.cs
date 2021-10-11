@@ -22,16 +22,19 @@ namespace Handin1.Data {
         public void AddAdult(Adult adult) {
             int max = adults.Max(a => a.Id);
             adult.Id = ++max;
-            adults.Add(adult);
-            persistence.SaveChanges();
+            persistence.AddAdult(adult);
         }
 
         public void EditAdult(Adult adult) {
-            throw new System.NotImplementedException();
+            persistence.EditAdult(adult);
         }
 
-        public void RemoveTodo(int id) {
-            throw new System.NotImplementedException();
+        public void RemoveAdult(int id) {
+            persistence.RemoveAdult(id);
+        }
+
+        public Adult GetById(int id) {
+            return adults.First(a => a.Id == id);
         }
     }
 }
