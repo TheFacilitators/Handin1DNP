@@ -83,16 +83,24 @@
         filterByName = null;
         try
         {
-            
+            filterByName = arg.ToString();
         }
         catch (Exception e)
         {
-            
+            //
         }
     }
 
     private void FilterByAge(ChangeEventArgs arg)
     {
-        
+        filterByAge = null;
+        try
+        {
+            filterByAge = int.Parse(arg.Value.ToString());
+        }
+        catch (Exception e)
+        {
+            //
+        }
     }
 }
