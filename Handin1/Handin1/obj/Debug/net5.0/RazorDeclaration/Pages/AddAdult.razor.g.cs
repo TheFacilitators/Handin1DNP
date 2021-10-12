@@ -96,6 +96,13 @@ using Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\AddAdult.razor"
+           [Authorize(Policy = "MustBeLoggedIn")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/AddAdult")]
     public partial class AddAdult : Microsoft.AspNetCore.Components.ComponentBase
     {

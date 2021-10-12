@@ -96,6 +96,13 @@ using Handin1.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+           [Authorize(Policy = "MustBeLoggedIn")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/EditAdult/{Id:int}")]
     public partial class EditAdult : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using Handin1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
+#line 39 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\EditAdult.razor"
        
     [Parameter] public int Id { get; set; }
     private Adult editing;

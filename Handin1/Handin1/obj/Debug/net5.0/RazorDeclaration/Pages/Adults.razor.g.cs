@@ -105,7 +105,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 63 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 67 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
     private IList<Adult> displayed;
