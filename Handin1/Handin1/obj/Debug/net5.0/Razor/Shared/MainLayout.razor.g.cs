@@ -93,27 +93,23 @@ using LoginComponent;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "sidebar");
-            __builder.AddAttribute(2, "b-u5azsnzqax");
-            __builder.OpenComponent<Handin1.Shared.NavMenu>(3);
+            __builder.OpenComponent<Handin1.Shared.NavMenu>(2);
             __builder.CloseComponent();
             __builder.CloseElement();
-            __builder.AddMarkupContent(4, "\r\n\r\n");
-            __builder.OpenElement(5, "div");
-            __builder.AddAttribute(6, "class", "main");
-            __builder.AddAttribute(7, "b-u5azsnzqax");
-            __builder.OpenElement(8, "div");
-            __builder.AddAttribute(9, "class", "top-row px-4");
-            __builder.AddAttribute(10, "b-u5azsnzqax");
-            __builder.OpenComponent<LoginComponent.Login>(11);
+            __builder.AddMarkupContent(3, "\r\n\r\n");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "main");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "top-row px-4");
+            __builder.OpenComponent<LoginComponent.Login>(8);
             __builder.CloseComponent();
-            __builder.AddMarkupContent(12, "\r\n        ");
-            __builder.AddMarkupContent(13, "<a href=\"https://docs.microsoft.com/aspnet/\" target=\"_blank\" b-u5azsnzqax>About</a>");
+            __builder.AddMarkupContent(9, "\r\n        ");
+            __builder.AddMarkupContent(10, "<a href=\"https://docs.microsoft.com/aspnet/\" target=\"_blank\">About</a>");
             __builder.CloseElement();
-            __builder.AddMarkupContent(14, "\r\n\r\n    ");
-            __builder.OpenElement(15, "div");
-            __builder.AddAttribute(16, "class", "content px-4");
-            __builder.AddAttribute(17, "b-u5azsnzqax");
-            __builder.AddContent(18, 
+            __builder.AddMarkupContent(11, "\r\n\r\n    ");
+            __builder.OpenElement(12, "div");
+            __builder.AddAttribute(13, "class", "content px-4");
+            __builder.AddContent(14, 
 #nullable restore
 #line 17 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Shared\MainLayout.razor"
          Body
