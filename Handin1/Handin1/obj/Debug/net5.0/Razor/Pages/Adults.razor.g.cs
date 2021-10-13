@@ -108,12 +108,12 @@ using Models;
             __builder.AddAttribute(6, "oninput", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.ChangeEventArgs>(this, 
 #nullable restore
 #line 12 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
-                                                 ((arg) => FilterByName(arg)
+                                                 (arg) => FilterByName(arg)
 
 #line default
 #line hidden
 #nullable disable
-            )));
+            ));
             __builder.AddAttribute(7, "style", "width: 100px");
             __builder.CloseElement();
             __builder.CloseElement();
@@ -125,12 +125,12 @@ using Models;
             __builder.AddAttribute(13, "oninput", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.ChangeEventArgs>(this, 
 #nullable restore
 #line 15 "C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
-                                                  ((arg) => FilterByAge(arg)
+                                                  (arg) => FilterByAge(arg)
 
 #line default
 #line hidden
 #nullable disable
-            )));
+            ));
             __builder.AddAttribute(14, "style", "width: 50px");
             __builder.CloseElement();
             __builder.CloseElement();
