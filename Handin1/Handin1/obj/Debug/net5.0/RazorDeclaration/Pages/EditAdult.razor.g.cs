@@ -116,7 +116,7 @@ using Handin1.Data;
        
     [Parameter] public int Id { get; set; }
     private Adult editing;
-    List<string> radioOpt = new List<string> {"M", "F", "O"};
+    List<string> radioOpt = new List<string> {" M", " F", " O"};
 
     protected override Task OnInitializedAsync()
     {

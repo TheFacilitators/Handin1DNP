@@ -115,7 +115,7 @@ using Models;
 #line 39 "C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\Pages\AddAdult.razor"
        
     private Adult newAdult = new Adult();
-    List<string> radioOpt = new List<string> {"M", "F", "O"};
+    List<string> radioOpt = new List<string> {" M", " F", " O"};
 
     private void AddNewAdult()
     {
