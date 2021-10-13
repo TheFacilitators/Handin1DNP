@@ -22,6 +22,15 @@
         Age:<br/>
         <InputNumber @bind-Value="newAdult.Age"/>
     </div>
+    <div class="from-group">
+        Sex:<br/>
+        <InputRadioGroup @bind-Value="newAdult.Sex">
+            @foreach (var opt in radioOpt)
+            {
+                <InputRadio Value="opt"/>@opt<br/>
+            }
+        </InputRadioGroup>
+    </div>
     <p class="actions">
         <button class="btn btn-outline-dark" type="submit">Create</button>
     </p>
@@ -29,11 +38,11 @@
 
 @code {
     private Adult newAdult = new Adult();
+    List<string> radioOpt = new List<string> {"M", "F", "O"};
 
     private void AddNewAdult()
     {
         Data.AddAdult(newAdult);
         Nav.NavigateTo("/Adults");
     }
-
 }

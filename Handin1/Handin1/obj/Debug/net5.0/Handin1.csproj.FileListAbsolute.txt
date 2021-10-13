@@ -56,7 +56,6 @@ C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Hand
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Handin1.csproj.CopyComplete
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\appsettings.json
-C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\Handin1.StaticWebAssets.xml
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\Handin1.exe
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\Handin1.deps.json
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\bin\Debug\net5.0\Handin1.runtimeconfig.json
@@ -102,10 +101,7 @@ C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Hand
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Handin1.RazorAssemblyInfo.cs
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\staticwebassets\Handin1.StaticWebAssets.Manifest.cache
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\staticwebassets\Handin1.StaticWebAssets.xml
-C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\scopedcss\bundle\Handin1.styles.css
-C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\scopedcss\projectbundle\Handin1.bundle.scp.css
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Handin1.RazorTargetAssemblyInfo.cache
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Handin1.RazorTargetAssemblyInfo.cs
 C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Handin1.Views.pdb
@@ -177,3 +173,5 @@ C:\Users\jodyc\RiderProjects\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Handin1
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\bin\Debug\net5.0\adults.json
+C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
+C:\Users\Bruger\RiderProjects\DNP1\Handin1\Handin1\Handin1\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
