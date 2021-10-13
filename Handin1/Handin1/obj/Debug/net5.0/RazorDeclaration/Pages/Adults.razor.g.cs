@@ -161,7 +161,7 @@ using Models;
     private void ExecuteFilter()
     {
         displayed = adults.Where(a =>
-            filterByName != "" && (a.FirstName.Contains(filterByName) || a.LastName.Contains(filterByName)) || filterByName == "" &&
+            filterByName != "" && (a.FirstName.ToLower().Contains(filterByName) || a.LastName.ToLower().Contains(filterByName)) || filterByName == "" &&
             (filterByAge != null && a.Age == filterByAge || filterByAge == null)).ToList();
     }
     
