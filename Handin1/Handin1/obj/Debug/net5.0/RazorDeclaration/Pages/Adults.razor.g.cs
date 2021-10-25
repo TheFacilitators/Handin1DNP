@@ -105,7 +105,7 @@ using Handin1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 51 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 53 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
 
