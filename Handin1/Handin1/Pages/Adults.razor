@@ -30,7 +30,7 @@
          </thead>
          <tbody>
 
-         @foreach (var item in adults) {
+         @foreach (var item in displayed) {
              <tr>
                  <td>@item.Id</td>
                  <td>@item.FirstName</td>
@@ -56,6 +56,7 @@
  }
 @code {
     private IList<Adult> adults;
+    private IList<Adult> displayed;
 
     private string searchByName;
 
@@ -69,11 +70,22 @@
 
     protected override async Task OnInitializedAsync() {
         adults = AdultData.GetAdults();
+        displayed = adults;
     }
 
     private void FilterByName(ChangeEventArgs search)
     {
-      
+        try {
+            searchByName = search.Value.ToString();
+            displayed = adults.Where(a => a.FirstName.Contains(searchByName) || a.LastName.Contains(searchByName));
+        }
+        catch (Exception e) {
+            Console.WriteLine(e);
+        }
+        
+    }
+
+    private void Filter() {
     }
 
 }
