@@ -6,6 +6,7 @@ using Handin1.Authentication;
 using Handin1.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +32,7 @@ namespace Handin1
             services.AddServerSideBlazor();
             services.AddSingleton<IAdultData, ImpAdultData>();
             services.AddScoped<ILogin, ImpLogin>();
+            services.AddScoped<AuthenticationStateProvider, CustomASP>();
 
             services.AddAuthorization(options => {
                 options.AddPolicy("SecurityLevel4", a => a.RequireAuthenticatedUser().RequireClaim("Level", "4", "5"));
