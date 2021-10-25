@@ -67,8 +67,8 @@ namespace Handin1.Authentication {
         private ClaimsIdentity SetupClaimsForUser(User user) {
             List<Claim> claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.Name, user.Username));
-            
             claims.Add(new Claim("Level", user.SecurityLevel.ToString()));
+            claims.Add(new Claim("Password", user.Password));
 
             ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth_type");
             return identity;

@@ -31,6 +31,10 @@ namespace Handin1
             services.AddServerSideBlazor();
             services.AddSingleton<IAdultData, ImpAdultData>();
             services.AddScoped<ILogin, ImpLogin>();
+
+            services.AddAuthorization(options => {
+                options.AddPolicy("SecurityLevel4", a => a.RequireAuthenticatedUser().RequireClaim("Level", "4", "5"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

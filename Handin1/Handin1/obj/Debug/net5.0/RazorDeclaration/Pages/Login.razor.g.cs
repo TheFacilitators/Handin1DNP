@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Handin1.Shared
+namespace LoginComponent
 {
     #line hidden
     using System;
@@ -82,7 +82,15 @@ using Handin1.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Login.razor"
+using Handin1.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
+    public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,20 +98,40 @@ using Handin1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Shared\NavMenu.razor"
+#line 31 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Login.razor"
        
-    private bool collapseNavMenu = true;
+    private string username;
+    private string password;
+    private string errorMessage;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    public async Task PerformLogin() {
+        errorMessage = "";
+        try {
+            ((CustomASP) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        } catch (Exception e) {
+            Console.WriteLine(e.Message);
+            errorMessage = e.Message;
+        }
+    }
 
-    private void ToggleNavMenu() {
-        collapseNavMenu = !collapseNavMenu;
+    public async Task PerformLogout() {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try {
+            ((CustomASP) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        } catch (Exception e) { }
     }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591
