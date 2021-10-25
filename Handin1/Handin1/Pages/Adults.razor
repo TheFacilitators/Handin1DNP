@@ -77,15 +77,12 @@
     {
         try {
             searchByName = search.Value.ToString();
-            displayed = adults.Where(a => a.FirstName.Contains(searchByName) || a.LastName.Contains(searchByName));
+            displayed = adults.Where(a => a.FirstName.Contains(searchByName) || a.LastName.Contains(searchByName)).ToList();
         }
         catch (Exception e) {
             Console.WriteLine(e);
         }
         
-    }
-
-    private void Filter() {
     }
 
 }

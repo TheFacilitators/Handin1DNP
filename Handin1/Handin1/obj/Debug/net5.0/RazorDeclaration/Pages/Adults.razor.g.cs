@@ -105,9 +105,12 @@ using Handin1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 53 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
+#line 57 "C:\Users\Lukas\Documents\GitHub\Handin1DNP\Handin1\Handin1\Pages\Adults.razor"
        
     private IList<Adult> adults;
+    private IList<Adult> displayed;
+
+    private string searchByName;
 
     private void RemoveAdult(int id) {
         AdultData.RemoveAdult(id);
@@ -119,6 +122,19 @@ using Handin1.Data;
 
     protected override async Task OnInitializedAsync() {
         adults = AdultData.GetAdults();
+        displayed = adults;
+    }
+
+    private void FilterByName(ChangeEventArgs search)
+    {
+        try {
+            searchByName = search.Value.ToString();
+            displayed = adults.Where(a => a.FirstName.Contains(searchByName) || a.LastName.Contains(searchByName)).ToList();
+        }
+        catch (Exception e) {
+            Console.WriteLine(e);
+        }
+        
     }
 
 
